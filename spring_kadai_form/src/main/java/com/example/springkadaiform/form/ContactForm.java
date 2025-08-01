@@ -8,7 +8,8 @@ public class ContactForm {
 	
 	@NotBlank(message = "名前を入力してください。")
 	private String name;
-	@NotBlank@Email(message = "メールアドレスの入力形式が正しくありません。")
+	@NotBlank(message = "メールアドレスの入力形式が正しくありません。")
+	@Email(message = "メールアドレスの形式が正しくありません。")
 	private String email;
 	@NotBlank(message = "お問い合わせ内容を入力してください。")
 	private String message;

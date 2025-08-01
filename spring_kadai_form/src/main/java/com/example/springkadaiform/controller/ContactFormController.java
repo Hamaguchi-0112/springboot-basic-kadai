@@ -12,26 +12,28 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.example.springkadaiform.form.ContactForm;
 
 @Controller
-
 public class ContactFormController {
-	@GetMapping("/form")
-	public String form(Model model) {
-		
-		model.addAttribute("form",new ContactForm());
-		return "contactFormView";
-	}
-	@PostMapping("/confirm")
-	public String confirm (RedirectAttributes redirectAttributes,
-			@Validated @ModelAttribute ("form")ContactForm form, BindingResult result,Model model) {
-		if(result.hasErrors()) {
-			model.addAttribute("form", form);
-			return "redirect/contactFormView";
-		}
-		model.addAttribute("form", form);
-		return "confirmView";
-	}
-		
-	
+
+    @GetMapping("/form")
+    public String form(Model model) {
+       
+        if (!model.containsAttribute("form")) {
+            model.addAttribute("form", new ContactForm());
+        }
+        return "contactFormView";
+    }
+
+    @PostMapping("/confirm")
+    public String confirm(RedirectAttributes redirectAttributes,
+                          @Validated @ModelAttribute("form") ContactForm form,
+                          BindingResult result) {
+
+        if (result.hasErrors()) {
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.form", result);
+            redirectAttributes.addFlashAttribute("form", form);
+            return "redirect:/form";
+        }
+
+        return "confirmView";
+    }
 }
-
-
