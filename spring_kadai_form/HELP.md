@@ -1,9 +1,3 @@
-# Read Me First
-The following was discovered as part of building this project:
-
-* The original package name 'com.example.springkadaitodo
-' is invalid and this project uses 'com.example.springkadaitodo' instead.
-
 # Getting Started
 
 ### Reference Documentation
@@ -14,7 +8,6 @@ For further reference, please consider the following sections:
 * [Create an OCI image](https://docs.spring.io/spring-boot/3.5.4/maven-plugin/build-image.html)
 * [Spring Data JPA](https://docs.spring.io/spring-boot/3.5.4/reference/data/sql.html#data.sql.jpa-and-spring-data)
 * [Spring Boot DevTools](https://docs.spring.io/spring-boot/3.5.4/reference/using/devtools.html)
-* [Spring Security](https://docs.spring.io/spring-boot/3.5.4/reference/web/spring-security.html)
 * [Thymeleaf](https://docs.spring.io/spring-boot/3.5.4/reference/web/servlet.html#web.servlet.spring-mvc.template-engines)
 * [Validation](https://docs.spring.io/spring-boot/3.5.4/reference/io/validation.html)
 * [Spring Web](https://docs.spring.io/spring-boot/3.5.4/reference/web/servlet.html)
@@ -24,9 +17,6 @@ The following guides illustrate how to use some features concretely:
 
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 * [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
-* [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
-* [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
-* [Authenticating a User with LDAP](https://spring.io/guides/gs/authenticating-ldap/)
 * [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
 * [Validation](https://spring.io/guides/gs/validating-form-input/)
 * [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
