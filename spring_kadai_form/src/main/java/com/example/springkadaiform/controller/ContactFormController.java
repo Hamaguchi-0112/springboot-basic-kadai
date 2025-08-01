@@ -25,7 +25,7 @@ public class ContactFormController {
 			@Validated @ModelAttribute ("form")ContactForm form, BindingResult result,Model model) {
 		if(result.hasErrors()) {
 			model.addAttribute("form", form);
-			return "contactFormView";
+			return "redirect/contactFormView";
 		}
 		model.addAttribute("form", form);
 		return "confirmView";
